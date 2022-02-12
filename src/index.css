@@ -89,7 +89,10 @@ code {
   cursor: pointer;
 }
 
-
+/* loginform */
+.col-lg-login {
+  flex: 0 0 auto;
+}
 
 
 /* footer */
