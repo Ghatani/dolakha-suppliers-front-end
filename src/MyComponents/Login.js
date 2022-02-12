@@ -64,14 +64,13 @@ const Login = ()=>{
             <section class="get-in-touch">
             <h1 class="title">LOGIN</h1>
             <form class="contact-form row">
-            <div class="form-field col-lg-6">      
-                
+            <div class="form-field col-lg-login">                     
             <input id="name" class="input-text js-input" type="text" required 
             onChange={(e)=>setUsername(e.target.value)} />
             <label class="label" for="name">Username</label>
             </div>
-            <div></div>
-            <div class="form-field col-lg-6 ">
+            
+            <div class="form-field col-lg-login ">
             <input id="password" class="input-text js-input" type="password" required 
             onChange={(e)=>setPassword(e.target.value)} />
             <label class="label" for="company">Password</label>
