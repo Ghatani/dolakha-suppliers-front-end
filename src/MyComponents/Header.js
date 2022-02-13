@@ -15,8 +15,8 @@ class Header extends Component{
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto tm-navbar-nav">
                     <li class="nav-item active"><Link class="nav-link" to="/">Home</Link></li>
-                    <li class="nav-item"><Link class="nav-link" to="/about">About</Link></li>
-                    <li class="nav-item"><Link class="nav-link" to="/contact">Contact Us</Link></li>
+                    
+                    
                     <li class="nav-item"><Link class="nav-link" to="/material/1122">Material</Link></li>                        
                     <li class="nav-item"><Link class="nav-link" to="/material/add">Add Material</Link></li>
                     <li class="nav-item"><Link class="nav-link" to="/material/show">Show Material</Link></li>
