@@ -42,7 +42,55 @@ class Home extends Component {
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+                <div class="story-container">
+                    <div class="ourservice">
+                        <h3 class="text-center">
+                            Our Services
+                        </h3>
+                        <p>
+                            Our code generation engine enables API providers to generate SDKs for their APIs within minutes and at a fraction of the cost. We provide tools like our API editor and API transformer to further aid API providers in minimizing the time required to ship excellent quality SDKs to the developers using their APIs. Our code generation engine is also capable of generating succinct and error-free documentation for APIs and SDKs, both. The documentation for the SDKs includes dynamic screenshots detailing usage instructions tailored to the provider's specific API and also code snippets showing example usage. As the cherry on the cake, we provide beautifully designed DX portals to encapsulate this documentation.
+                        </p> </div>
+                </div>
+
+                <div class="container d-flex align-items-center justify-content-center flex-wrap">
+                    <div class="box">
+                        <div class="body">
+                            <div class="imgContainer"> <img src="https://images.pexels.com/photos/3601422/pexels-photo-3601422.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /> </div>
+                            <div class="content d-flex flex-column align-items-center justify-content-center">
+                                <div>
+                                    <h3 class="text-white fs-5">BRICK</h3>
+                                    <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="body">
+                            <div class="imgContainer"> <img src="https://images.pexels.com/photos/1532771/pexels-photo-1532771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" /> </div>
+                            <div class="content d-flex flex-column align-items-center justify-content-center">
+                                <div>
+                                    <h3 class="text-white fs-5">SAND</h3>
+                                    <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="body">
+                            <div class="imgContainer"> <img src="https://images.pexels.com/photos/573238/pexels-photo-573238.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" /> </div>
+                            <div class="content d-flex flex-column align-items-center justify-content-center">
+                                <div>
+                                    <h3 class="text-white fs-5">CHIPS</h3>
+                                    <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
+
         )
     }
 }
