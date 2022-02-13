@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Footer extends Component{
     render(){
@@ -13,7 +14,7 @@ class Footer extends Component{
               <h3 class="text-dark">Let's get started!</h3>
             </div>
             <div class="ml-auto">
-              <a href="#" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+              <Link class="btn btn-dark rounded-0 py-3 px-5" to="/contact" >Contact us</Link>
             </div>
             </div>
             <div class="row">
