@@ -34,7 +34,7 @@ class Header extends Component{
                     </Link></li>
                     <li class="nav-item"><Link class="nav-link" to="/about">About</Link></li>
                     <li class="nav-item"><Link class="nav-link" to="/contact">Contact Us</Link></li>
-                    <li class="nav-item"><Link class="nav-link" to="user/register">Register</Link></li>
+                    <li class="nav-item"><Link class="nav-link" to="user/register">Register</Link></li>               
                     <li class="nav-item"><Link class="nav-link" to="/user/login">Login</Link></li>              
                 </ul>
                 </div>
@@ -46,7 +46,7 @@ class Header extends Component{
             <>
             <div class="background">
             {/* page header */}           
-            <div class="container" id="home">
+            {/* <div class="container" id="home">
             <div class="col-12 text-center">
             <div class="tm-page-header">
             <i class="fas fa-4x fa-chart-bar mr-4"></i>
@@ -54,9 +54,9 @@ class Header extends Component{
             
             </div>
             </div>
-            </div>
+            </div> */}
 
-            <div class="tm-nav-section">
+            <div className="tm-nav-section">
             <div class="container">
             <div class="row">
             <div class="col-12">
@@ -78,8 +78,9 @@ class Header extends Component{
               </nav> */}
               <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container-fluid">
+                <p class="head" data-text="DOLAKHA SUPPLIERS">DOLAKHA SUPPLIERS</p>
                 <button class="navbar-toggler" type="button" 
-                data-toggle="collapse" data-target="#navbarNav" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" 
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
