@@ -44,7 +44,7 @@ class Header extends Component{
 
         return(
             <>
-            <div class="background">
+            
             {/* page header */}           
             {/* <div class="container" id="home">
             <div class="col-12 text-center">
@@ -92,7 +92,7 @@ class Header extends Component{
 
               </div></div></div></div>
 
-              </div>
+              
             
             </>
         )
