@@ -3,7 +3,7 @@ import { Component } from "react";
 class Contact extends Component{
     render(){
         return(
-            <div class="bgcontact">
+            
                 <div class="containercontact mt-xl-5 mb-5">
     <div class="d-flex justify-content-center pt-5">
         <h2 class="font-weight-bold h2contact">Get in touch!</h2>
@@ -65,7 +65,7 @@ class Contact extends Component{
         </form>
     </div>
 </div>
-            </div>
+            
         )
     }
 }
