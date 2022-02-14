@@ -10,6 +10,7 @@ import Addmaterial from "./AddMaterial,";
 import ShowMaterial from "./ShowMaterial";
 import Record from "./Record";
 import Transaction from "./Transaction";
+import PrivateRoute from "./ProtectedRoute";
 
 class Mid extends Component{
     render(){
@@ -22,10 +23,18 @@ class Mid extends Component{
                     <Route path='/material/:id' element={<Material />} />
                     <Route path='/user/register' element={<Register />} />
                     <Route path='/user/login' element={<Login />} />
-                    <Route path='/material/add' element={<Addmaterial />} />
-                    <Route path='/material/show' element={<ShowMaterial />} />
-                    <Route path='/records/all' element={<Record />} />
-                    <Route path='/transaction/all' element={<Transaction />} /> 
+                    <Route path='/material/add' element={
+                        <PrivateRoute><Addmaterial /></PrivateRoute> 
+                    }/>
+                    <Route path='/material/show' element={
+                        <PrivateRoute><ShowMaterial /></PrivateRoute> 
+                    }/>
+                    <Route path='/records/all' element={
+                        <PrivateRoute><Record /></PrivateRoute>
+                    }/>
+                    <Route path='/transaction/all' element={
+                        <PrivateRoute><Transaction /></PrivateRoute>
+                    }/> 
                 </Routes>
                 
             </div>
