@@ -8,6 +8,8 @@ import Register from "./Register";
 import Login from "./Login";
 import Addmaterial from "./AddMaterial,";
 import ShowMaterial from "./ShowMaterial";
+import Record from "./Record";
+import Transaction from "./Transaction";
 
 class Mid extends Component{
     render(){
@@ -22,6 +24,8 @@ class Mid extends Component{
                     <Route path='/user/login' element={<Login />} />
                     <Route path='/material/add' element={<Addmaterial />} />
                     <Route path='/material/show' element={<ShowMaterial />} />
+                    <Route path='/records/all' element={<Record />} />
+                    <Route path='/transaction/all' element={<Transaction />} /> 
                 </Routes>
                 
             </div>
