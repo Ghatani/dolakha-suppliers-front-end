@@ -23,8 +23,8 @@ const ShowMaterial =()=>{
     },[]);
 
     const deleteMaterial=(mid)=>{
-        //const pro_data = {pid}
-       // console.log(pid)
+        //const pro_data = {mid}
+       // console.log(mid)
     axios.delete("http://localhost:90/material/delete/"+mid, config)
     .then(result=>{console.log(result.data)})
     .catch()
