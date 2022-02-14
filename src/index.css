@@ -96,9 +96,6 @@ code {
 
 
 /* footer */
-.navbar-expand-md .navbar-nav .nav-link {
-  padding: 10px 35px;
-}
 
 body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
@@ -206,22 +203,23 @@ a {
   left: 0;
   width: 100%;
   border-top: 1px solid #909090;
-  border-bottom: 1px solid #909090;
+  /* border-bottom: 1px solid #909090; */
   background-color: white;
   z-index: 3000;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .tm-nav-section.sticky {
   position: fixed;
   top: 0;
-  border-top: none;
+  border: none;
   background: white;
-  
+  box-shadow: rgb(17 17 26 / 10%) 0px 4px 16px, rgb(17 17 26 / 10%) 0px 8px 24px, rgb(17 17 26 / 10%) 0px 16px 56px;
   
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-  padding: 10px 35px;
+  padding: 10px 18px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -291,10 +289,10 @@ a {
 }
 
 /* headername */
-@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
 .head {
   text-transform: Uppercase;
-  margin-bottom: .5em;
+  margin-bottom: 1px;
+  margin-top: 1px;
   font-family: 'Rubik', sans-serif;
   font-size: 25px;
   color: #E4E5E6; 
@@ -841,7 +839,7 @@ form .containercontact {
 .card-body{
   margin: 25px 0% 0% 3%;
   padding: 6% 4%;
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   color: white;
   background: #252954;
@@ -850,5 +848,9 @@ form .containercontact {
 }
 .card-body:hover{
   background: #2b3063;
+}
+
+.pd{
+  padding-top: 18px;
 }
 
