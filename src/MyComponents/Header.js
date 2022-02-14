@@ -31,8 +31,9 @@ class Header extends Component{
                     <li class="nav-item active"><Link class="nav-link" to="/">Home
                     </Link></li>
                     <li class="nav-item"><Link class="nav-link" to="/about">About</Link></li>
-                    <li class="nav-item"><Link class="nav-link" to="/contact">Contact Us</Link></li>
+                    {/* <li class="nav-item"><Link class="nav-link" to="/contact">Contact Us</Link></li> */}
                     <li class="nav-item"><Link class="nav-link" to="/records/all">Records</Link></li>
+                    <li class="nav-item"><Link class="nav-link" to="/transaction/all">Transactions</Link></li>
                     <li class="nav-item"><Link class="nav-link" to="user/register">Register</Link></li>               
                     <li class="nav-item"><Link class="nav-link" to="/user/login">Login</Link></li>              
                 </ul>
