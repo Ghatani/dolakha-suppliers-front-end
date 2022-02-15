@@ -49,7 +49,7 @@ const Login = ()=>{
                             />
                         </div>
                         <div className="form-group">
-                            <input type="button" class="btn btn-primary" value="LOGIN"
+                            <input type="button" className="btn btn-primary" value="LOGIN"
                             onClick={userLogin}
                             />
                         </div>
@@ -61,23 +61,23 @@ const Login = ()=>{
             </div>
 
 
-            <section class="get-in-touch">
-            <h1 class="title">LOGIN</h1>
-            <form class="contact-form row">
-            <div class="form-field col-lg-login">                     
-            <input id="name" class="input-text js-input" type="text" required 
+            <section className="get-in-touch">
+            <h1 className="title">LOGIN</h1>
+            <form className="contact-form row">
+            <div className="form-field col-lg-login">                     
+            <input id="name" className="input-text js-input" type="text" required 
             onChange={(e)=>setUsername(e.target.value)} />
-            <label class="label" for="name">Username</label>
+            <label className="label" htmlFor="name">Username</label>
             </div>
             
-            <div class="form-field col-lg-login ">
-            <input id="password" class="input-text js-input" type="password" required 
+            <div className="form-field col-lg-login ">
+            <input id="password" className="input-text js-input" type="password" required 
             onChange={(e)=>setPassword(e.target.value)} />
-            <label class="label" for="company">Password</label>
+            <label className="label" htmlFor="company">Password</label>
             </div>
       
-            <div class="form-field col-lg-12">
-            <input class="submit-btn" type="submit" value="LOGIN" onClick={userLogin}/>
+            <div className="form-field col-lg-12">
+            <input className="submit-btn" type="submit" value="LOGIN" onClick={userLogin}/>
             </div> 
                       
             </form>

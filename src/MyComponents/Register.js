@@ -38,8 +38,8 @@ const Register = () => {
                 <input type="text" className="form-control" placeholder="Enter Phone number"
                 onChange={(e)=>setPhone(e.target.value)} />    
                 </div>
-                <div class="text-center">
-                <button type="submit" class="btn btn-primary" onClick={userRegister}>Submit</button>
+                <div className="text-center">
+                <button type="submit" className="btn btn-primary" onClick={userRegister}>Submit</button>
                 </div>
                 
             </form>   
@@ -50,31 +50,31 @@ const Register = () => {
                 {msg} 
         </div>
 
-        <section class="get-in-touch">
-        <h1 class="title">REGISTER NEW USER</h1>
-        <form class="contact-form row">
-      <div class="form-field col-lg-6">
-         <input id="name" class="input-text js-input" type="text" required 
+        <section className="get-in-touch">
+        <h1 className="title">REGISTER NEW USER</h1>
+        <form className="contact-form row">
+      <div className="form-field col-lg-6">
+         <input id="name" className="input-text js-input" type="text" required 
          onChange={(e)=>setUsername(e.target.value)} />
-         <label class="label" for="name">Username</label>
+         <label className="label" htmlFor="name">Username</label>
       </div>
-      <div class="form-field col-lg-6 ">
-         <input id="email" class="input-text js-input" type="email" required />
-         <label class="label" for="email">E-mail</label>
+      <div className="form-field col-lg-6 ">
+         <input id="email" className="input-text js-input" type="email" required />
+         <label className="label" htmlFor="email">E-mail</label>
       </div>
-      <div class="form-field col-lg-6 ">
-         <input id="password" class="input-text js-input" type="password" required 
+      <div className="form-field col-lg-6 ">
+         <input id="password" className="input-text js-input" type="password" required 
          onChange={(e)=>setPassword(e.target.value)} />
-         <label class="label" for="company">Password</label>
+         <label className="label" htmlFor="company">Password</label>
       </div>
-       <div class="form-field col-lg-6 ">
-         <input id="phone" class="input-text js-input" type="text" required 
+       <div className="form-field col-lg-6 ">
+         <input id="phone" className="input-text js-input" type="text" required 
          onChange={(e)=>setPhone(e.target.value)} />
-         <label class="label" for="phone">Contact Number</label>
+         <label className="label" htmlFor="phone">Contact Number</label>
       </div>
       
-      <div class="form-field col-lg-12">
-         <input class="submit-btn" type="submit" value="Submit" onClick={userRegister}/>
+      <div className="form-field col-lg-12">
+         <input className="submit-btn" type="submit" value="Submit" onClick={userRegister}/>
       </div>
     </form>
     </section>
