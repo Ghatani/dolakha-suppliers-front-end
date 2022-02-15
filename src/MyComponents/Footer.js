@@ -4,58 +4,58 @@ import { Link } from "react-router-dom";
 class Footer extends Component{
     render(){
         return(
-            <footer class="footer-20192">
-            <div class="site-section">
-            <div class="container">
+            <footer className="footer-20192">
+            <div className="site-section">
+            <div className="container">
 
-            <div class="cta d-block d-md-flex align-items-center px-5">
+            <div className="cta d-block d-md-flex align-items-center px-5">
             <div>
-              <h2 class="mb-0">Ready for a next house?</h2>
-              <h3 class="text-dark">Let's get started!</h3>
+              <h2 className="mb-0">Ready for a next house?</h2>
+              <h3 className="text-dark">Let's get started!</h3>
             </div>
-            <div class="ml-auto">
-              <Link class="btn btn-dark rounded-0 py-3 px-5" to="/contact" >Contact us</Link>
+            <div className="ml-auto">
+              <Link className="btn btn-dark rounded-0 py-3 px-5" to="/contact" >Contact us</Link>
             </div>
             </div>
-            <div class="row">
+            <div className="row">
 
-            <div class="col-sm">
-              <a href="#" class="footer-logo">DolakhaSuppliers</a>
-              <p class="copyright">
+            <div className="col-sm">
+              <a href="#" className="footer-logo">DolakhaSuppliers</a>
+              <p className="copyright">
                 <small>&copy; 2022</small>
               </p>
             </div>
-            <div class="col-sm">
+            <div className="col-sm">
               <h3>Customers</h3>
-              <ul class="list-unstyled links">
+              <ul className="list-unstyled links">
                 <li><a href="#">Buyer</a></li>
                 <li><a href="#">Supplier</a></li>
               </ul>
             </div>
-            <div class="col-sm">
+            <div className="col-sm">
               <h3>Company</h3>
-              <ul class="list-unstyled links">
+              <ul className="list-unstyled links">
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Careers</a></li>
                 <li><a href="#">Contact us</a></li>
               </ul>
             </div>
-            <div class="col-sm">
+            <div className="col-sm">
               <h3>Further Information</h3>
-              <ul class="list-unstyled links">
+              <ul className="list-unstyled links">
                 <li><a href="#">Terms &amp; Conditions</a></li>
                 <li><a href="#">Privacy Policy</a></li>
               </ul>
             </div>
-            <div class="col-md-3">
+            <div className="col-md-3">
               <h3>Follow us</h3>
-              <ul class="list-unstyled social">
+              <ul className="list-unstyled social">
                 
-                <li><a href="#"><span class="icon-facebook"></span></a></li>
-                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                <li><a href="#"><span class="icon-medium"></span></a></li>
-                <li><a href="#"><span class="icon-paper-plane"></span></a></li>
+                <li><a href="#"><span className="icon-facebook"></span></a></li>
+                <li><a href="#"><span className="icon-twitter"></span></a></li>
+                <li><a href="#"><span className="icon-linkedin"></span></a></li>
+                <li><a href="#"><span className="icon-medium"></span></a></li>
+                <li><a href="#"><span className="icon-paper-plane"></span></a></li>
               </ul>
             </div>
             
