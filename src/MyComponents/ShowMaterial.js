@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ShowMaterial =()=>{
-    const [mdata, setmdata] = useState([]);
+    const [mdata, setMdata] = useState([]);
 
     const config ={
         headers : {
@@ -12,10 +12,10 @@ const ShowMaterial =()=>{
     }
 
     useEffect(()=>{
-        axios.get("http://localhost:90/material/single", config)
+        axios.get("http://localhost:90/material/view", config)
         .then(result=>{
             //console.log(result.data)
-            setmdata(result.data)
+            setMdata(result.data)
         })
         .catch(e=>{
             console.log(e)
@@ -36,61 +36,62 @@ const ShowMaterial =()=>{
 
             {mdata.map(singleData=>{
                 return(
-                    <div className="col-md-4">
-                    {/* <h2>Material Name : {singleData.materialName}</h2>
-                    <p><img src={'http://localhost:90/'+singleData.materialImage} className="img-fluid"  /></p>
-                    <p className="pname">Material Price : {singleData.materialPrice}</p>
+                    // <div className="col-md-4">
+                    // <h2>Material Name : {singleData.materialName}</h2>
+                    // <p><img src={'http://localhost:90/'+singleData.materialImage} className="img-fluid"  /></p>
+                    // <p className="pname">Material Price : {singleData.materialPrice}</p>
                     
-                    <p>Material Quantity : {singleData.materialQuantity}</p>
-                    <button onClick={()=>{deleteMaterial(singleData._id)}}>Delete</button>
-                    <Link to={'/updateMaterial/'+singleData._id}>Read More..</Link> */}
+                    // <p>Material Quantity : {singleData.materialQuantity}</p>
+                    // <button onClick={()=>{deleteMaterial(singleData._id)}}>Delete</button>
+                    // <Link to={'/updateMaterial/'+singleData._id}>Read More..</Link>                                               
+                    // </div>      
                     
-                    
-                    <section class="sectionmaterial">
-                    <div class="container">
-                    <div class="row">
-                        <h1 class="text-center"><span>Bootstrap 4 Cards</span>Created with <i class="fa fa-heart"></i> from Grafreez</h1>
-                        <div class="col-md-4">
-    		            <div class="card profile-card-1">
-    		            <img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-    		            <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-                        <div class="card-content">
-                        <h2>Savannah Fields<small>Engineer</small></h2>
-                        <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
-                        </div>
-                        </div>
-                    <p class="mt-3 w-100 float-left text-center"><strong>Basic Profile Card</strong></p>
-    		        </div>
-                    </div>
-                    </div>
+                    <div className="col-xs-12 col-sm-6 col-md-4">
+                    <div className="card">
 
-                    </section>
-                    
-                    
-                    </div>                   
+                        {/* <!--Card content--> */}
+                        <div className="card-body">
+                            <h4 className="card-title"> {singleData.MaterialName}</h4>
+                            <p className="card-text pd">                               
+                                Material Price: Rs. {singleData.MaterialPrice} <hr></hr>
+                                Material Quantity :  {singleData.MaterialQuantity} <hr></hr>                              
+                            </p>
+                            <Link to={'/material/'+singleData._id} className="btn btn-light-blue btn-md">Update</Link>
+                            {/* <button type="button" className="btn btn-light-blue btn-md">Update</button> */}
+                            <button type="button" className="btn btn-light-blue btn-md"
+                            onClick={()=>{deleteMaterial(singleData._id)}}>Delete</button>
+                        </div>
+                    </div>
+                    </div>
                    
                 )
-            })}
+            },[])}
 
-                    <section class="sectionmaterial">
-                    <div class="container">
-                    <div class="row">
-                        <h1 class="text-center"><span>Bootstrap 4 Cards</span>Created with <i class="fa fa-heart"></i> from Grafreez</h1>
-                        <div class="col-md-4">
-    		            <div class="card profile-card-1">
-    		            <img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-    		            <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-                        <div class="card-content">
-                        <h2>Savannah Fields<small>Engineer</small></h2>
-                        <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
-                        </div>
-                        </div>
-                    <p class="mt-3 w-100 float-left text-center"><strong>Basic Profile Card</strong></p>
-    		        </div>
-                    </div>
-                    </div>
+                <div className="col-xs-12 col-sm-6 col-md-4">
+                    <div className="card">
 
-                    </section>
+                        {/* <!--Card content--> */}
+                        <div className="card-body">
+                            <h4 className="card-title">Materials</h4>
+                            <p className="card-text pd">                               
+                                Material Price: Rs. 10000 <hr></hr>
+                                Material Quantity :  25 <hr></hr>                              
+                            </p>
+                            <button type="button" className="btn btn-light-blue btn-md">Read more</button>
+                            <button type="button" className="btn btn-light-blue btn-md">Delete</button>
+                        </div>
+                    </div>
+                </div>         
+
+                <div className="col-xs-12 col-sm-6 col-md-4">
+                    <div className="card">
+                        <div className="card-body">
+                            <h4 className="card-title">Add new material</h4>                    
+                            <Link to="/material/add" type="button" className="btn btn-light-blue btn-md">Add more</Link>
+                        </div>
+                    </div>
+                </div>
+                   
                                          
             </div>
         </div>
