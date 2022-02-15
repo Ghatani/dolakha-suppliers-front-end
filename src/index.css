@@ -619,7 +619,7 @@ form .containercontact {
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 500px;
+  height: fit-content;
   padding: 20px;
   width: 320px;
 }
@@ -739,6 +739,12 @@ form .containercontact {
   justify-content: center;
   height: 100vh;
   margin-bottom: 40px;
+}
+
+/* addrecord */
+.marg{
+  margin-top: 50px;
+  margin-bottom: 60px;
 }
 
 
