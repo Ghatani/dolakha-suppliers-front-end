@@ -28,14 +28,15 @@ const UpdateTransaction =()=> {
         })
         .catch (e=>{
 
-        },[])
-    },)
+        },)
+    },[])
     
     const updatetrans =(e)=>{
         e.preventDefault();
         const transdata ={
             tid, transName, transDate, transAmount
         }
+        //console.log(transdata)
         axios.put ("http://localhost:90/transaction/update", transdata, config)
     }
 

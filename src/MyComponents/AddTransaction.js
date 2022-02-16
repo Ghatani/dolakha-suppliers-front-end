@@ -13,16 +13,10 @@ const Addtransaction = () => {
         }
     }
 
-    const addtransaction = (e) => {
+    const addtransactions = (e) => {
         e.preventDefault();
-        // const transData = { transName, transDate, transAmount};
-        const transData = new FormData();
-        
-        transData.append('transName', transName);
-        transData.append('transDate', transDate);
-        transData.append('transAmount', transAmount);
-
-        
+        const transData = { transName, transDate, transAmount};
+        console.log(transData)
         axios.post("http://localhost:90/transaction/insert", transData, config)
             .then(result => setMsg(result.data.message))
             .catch()
@@ -57,7 +51,7 @@ const Addtransaction = () => {
                     <div className="cut cut-short"></div>
                     <label htmlFor="transAmount" className="placeholderM">Amount</label>
                 </div>        
-                <button type="text" className="submit" onClick={addtransaction}>Submit</button>
+                <button type="text" className="submit" onClick={addtransactions}>Submit</button>
             </div>
             {transName} {transDate} {transAmount} {msg}
             </div>
