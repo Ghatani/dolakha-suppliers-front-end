@@ -19,16 +19,16 @@ const UpdateMaterial =()=>{
     useEffect(()=>{
         axios.get("http://localhost:90/material/single/"+mid, config)
         .then (result=>{
-            //console.log(result.data)
+            console.log(result.data)
             //setmymaterial(result.data)
-            setmaterialName(result.data.MaterialName)
-            setmaterialQuantity(result.data.MaterialQuantity)
-            setmaterialPrice(result.data.MaterialPrice)
+            setmaterialName(result.data.materialName)
+            setmaterialQuantity(result.data.materialQuantity)
+            setmaterialPrice(result.data.materialPrice)
         })
         .catch (e=>{
 
-        },[])
-    },)
+        },)
+    },[])
 
     const updatematerials =(e)=>{
         e.preventDefault();

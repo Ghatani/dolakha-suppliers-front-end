@@ -2,23 +2,47 @@ import { useState } from "react";
 import axios from "axios";
 
 const Addmaterial = () => {
-    const [MaterialName, setMaterialName] = useState('');
-    const [MaterialPrice, setMaterialPrice] = useState('');
-    const [MaterialQuantity, setMaterialQuantity] = useState('');
+    const [materialName, setMaterialName] = useState('');
+    const [materialPrice, setMaterialPrice] = useState('');
+    const [materialQuantity, setMaterialQuantity] = useState('');
     const [msg, setMsg] = useState('');
 
-    const config = {
-        header: {
-            Authorization: 'Bearer' + localStorage.getItem('token')
-        }
-    }
+    
 
-    const addmaterial = (e) => {
+    const addmaterials = (e) => {
         e.preventDefault();
-        const materialData = { MaterialName, MaterialPrice, MaterialQuantity };
+
+        const config = {
+            header: {
+                Authorization: 'Bearer' + localStorage.getItem('token')
+            }
+        }
+
+        const materialData = {materialName, materialPrice, materialQuantity};
+
+        // const materialData = new FormData();
+        // materialData.append('materialName', materialName);
+        // materialData.append('materialPrice', materialPrice);
+        // materialData.append('materialQuantity', materialQuantity);
+        console.log(materialData);
+        //console.log(localStorage.getItem('token'))
+
         axios.post("http://localhost:90/material/add", materialData, config)
-        .then(result => setMsg(result.data.message))
-        .catch()
+        // .then(result => setMsg(result.data.message))
+        // .catch()
+        .then(result=>{
+            if(result.data.success){
+                // data inserted
+                setMsg("Product Inserted Successfully!!");
+
+            }
+            else{
+                setMsg("Something went wrong!!");
+            }
+        })
+        .catch(e=>{
+            setMsg("Something went wrong!!");
+        });
     }
     
     return (
@@ -26,28 +50,32 @@ const Addmaterial = () => {
             <div className="form">
                 <div className="title">Welcome</div>
                 <div className="subtitle">Let's add your material!</div>
+                
                 <div className="input-container ic1">
                     <input id="MaterialName" className="input" type="text" placeholder=" " 
-                    value={MaterialName}
-                    onChange={(e)=>setMaterialName(e.target.value)}/>
+                    value={materialName}
+                    onChange={e=>{setMaterialName(e.target.value)}}/>
                     <div className="cut"></div>
                     <label htmlFor="MaterialName" className="placeholderM">Material Name</label>
                 </div>
                 <div className="input-container ic2">
                     <input id="MaterialPrice" className="input" type="number" placeholder=" " 
-                    value={MaterialPrice}
-                    onChange={(e)=>setMaterialPrice(e.target.value)}/>
+                    value={materialPrice}
+                    onChange={e=>{setMaterialPrice(e.target.value)}}/>
                     <div className="cut"></div>
                     <label htmlFor="MaterialPrice" className="placeholderM">Material Price</label>
                 </div>
                 <div className="input-container ic2">
                     <input id="MaterialQuantity" className="input" type="number" placeholder=" " 
-                    value={MaterialQuantity}
-                    onChange={(e)=>setMaterialQuantity(e.target.value)}/>
+                    value={materialQuantity}
+                    onChange={e=>{setMaterialQuantity(e.target.value)}}/>
                     <div className="cut cut-short"></div>
-                    <label htmlFor="MaterialQuantity" className="placeholderM">Material Quantity</label>
+                    <label htmlFor="MaterialQuantity" className="placeholderM">Quantity</label>
                 </div>
-                <button type="text" className="submit" onClick={addmaterial}>Submit</button>
+                <button type="text" className="submit" onClick={addmaterials}>Submit</button>
+                
+                <div className="subtitle">              
+                {msg} </div>
             </div>
 
 

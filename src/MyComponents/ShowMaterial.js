@@ -25,9 +25,9 @@ const ShowMaterial =()=>{
     const deleteMaterial=(mid)=>{
         //const pro_data = {mid}
        // console.log(mid)
-    axios.delete("http://localhost:90/material/delete/"+mid, config)
-    .then(result=>{console.log(result.data)})
-    .catch()
+        axios.delete("http://localhost:90/material/delete/"+mid, config)
+        .then(result=>{console.log(result.data)})
+        .catch()
     }
 
     return(
@@ -51,12 +51,12 @@ const ShowMaterial =()=>{
 
                         {/* <!--Card content--> */}
                         <div className="card-body">
-                            <h4 className="card-title"> {singleData.MaterialName}</h4>
+                            <h4 className="card-title"> {singleData.materialName}</h4>
                             <p className="card-text pd">                               
-                                Material Price: Rs. {singleData.MaterialPrice} <hr></hr>
-                                Material Quantity :  {singleData.MaterialQuantity} <hr></hr>                              
+                                Material Price: Rs. {singleData.materialPrice} <hr></hr>
+                                Material Quantity :  {singleData.materialQuantity} <hr></hr>                              
                             </p>
-                            <Link to={'/material/'+singleData._id} className="btn btn-light-blue btn-md">Update</Link>
+                            <Link to={'/material/single/'+singleData._id} className="btn btn-light-blue btn-md">Update</Link>
                             {/* <button type="button" className="btn btn-light-blue btn-md">Update</button> */}
                             <button type="button" className="btn btn-light-blue btn-md"
                             onClick={()=>{deleteMaterial(singleData._id)}}>Delete</button>
