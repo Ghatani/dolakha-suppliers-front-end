@@ -15,6 +15,9 @@ import Addtransaction from "./AddTransaction";
 import PrivateRoute from "./ProtectedRoute";
 import UpdateRecord from "./UpdateRecord";
 import UpdateTransaction from "./UpdateTransaction";
+import Customer from "./Customer";
+import Addcustomer from "./AddCustomer";
+import UpdateCustomer from "./UpdateCustomer";
 
 class Mid extends Component{
     render(){
@@ -24,9 +27,11 @@ class Mid extends Component{
                     <Route path='/' element={<Home/>} />
                     <Route path='/about' element={<About />} />
                     <Route path='/contact' element={<Contact />} />
-                    <Route path='/material/:mid' element={<UpdateMaterial />} />
+                    <Route path="/material/single/:mid" element={<UpdateMaterial />} />
                     <Route path="/record/:rid" element={<UpdateRecord />} />
-                    <Route path="/transaction/:tid" element={<UpdateTransaction />} />
+                    <Route path="/transaction/:tid" element={<UpdateTransaction />} /> 
+                    <Route path="/customer/single/:cid" element={<UpdateCustomer />} />
+                   
                     <Route path='/user/register' element={<Register />} />
                     <Route path='/user/login' element={<Login />} />
                     <Route path='/material/add' element={
@@ -46,6 +51,12 @@ class Mid extends Component{
                     }/> 
                     <Route path='/transaction/add' element={
                         <PrivateRoute><Addtransaction /></PrivateRoute>
+                    }/>
+                    <Route path="/customer/all" element={
+                        <PrivateRoute><Customer /></PrivateRoute>
+                    }/>
+                    <Route path="/customer/add" element={
+                        <PrivateRoute><Addcustomer /></PrivateRoute>
                     }/>
                 </Routes>
                 
