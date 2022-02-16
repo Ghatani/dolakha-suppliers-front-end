@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const Customer = () => {
-    const [cdata, setTdata] = useState([]);
+    const [cdata, setcdata] = useState([]);
 
     const config = {
         headers: {
@@ -15,7 +15,7 @@ const Customer = () => {
         axios.get("http://localhost:90/customer/view/all", config)
             .then(result => {
                 
-                setTdata(result.data)
+                setcdata(result.data)
             })
             .catch(e => {
                 console.log(e)
@@ -25,7 +25,7 @@ const Customer = () => {
     const deletecustomer = (cid) => {
         //const pro_data = {tid}
         // console.log(tid)
-        axios.delete("http://localhost:90//customer/delete/" + cid, config)
+        axios.delete("http://localhost:90/customer/delete/" + cid, config)
             .then(result => { console.log(result.data) })
             .catch()
     }
@@ -48,7 +48,7 @@ const Customer = () => {
                                 Address : {singleData.caddress} <hr></hr>
                                 Phone : {singleData.cphnno} <hr></hr>                              
                             </p>
-                            <Link to={'/customer/update/'+singleData._id} className="btn btn-light-blue btn-md">Update</Link>
+                            <Link to={'/customer/single/'+singleData._id} className="btn btn-light-blue btn-md">Update</Link>
                             
                             <button type="button" className="btn btn-light-blue btn-md"
                             onClick={()=>{deletecustomer(singleData._id)}}>Delete</button>
