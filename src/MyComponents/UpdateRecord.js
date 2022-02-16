@@ -25,6 +25,7 @@ const UpdateRecord =()=> {
             //console.log(result.data)
             //setmyrecord(result.data)
             setmaterialName(result.data.materialName)
+            setrecordDate(result.data.recordDate)
             setcname(result.data.cname)
             setcaddress(result.data.caddress)
             setmaterialQty(result.data.materialQty)
@@ -32,8 +33,8 @@ const UpdateRecord =()=> {
         })
         .catch (e=>{
 
-        },[])
-    },)
+        },)
+    },[])
 
     const updaterecords =(e)=>{
         e.preventDefault();

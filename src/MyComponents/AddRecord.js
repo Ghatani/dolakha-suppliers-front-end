@@ -9,7 +9,7 @@ const Addrecord = () => {
     const [materialQty, setmaterialQty] = useState('');
     const [msg, setMsg] = useState('');
 
-    const addrecord = (e) => {
+    const addrecords = (e) => {
         e.preventDefault();
         const recordData = { materialName, recordDate, cname, caddress, materialQty};
         const config = {
@@ -69,7 +69,7 @@ const Addrecord = () => {
                     <label htmlFor="materialQty" className="placeholderM">Material Quantity</label>
                 </div>
 
-                <button type="text" className="submit" onClick={addrecord}>Submit</button>
+                <button type="text" className="submit" onClick={addrecords}>Submit</button>
             </div>
             </div></div>
     )
